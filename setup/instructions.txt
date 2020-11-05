@@ -1,0 +1,16 @@
+1) Create measurement shortcut from spectops and save it in the startup folder: 
+
+    C:\Users\<user name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+2) Install WinSCP
+3) Connect to Helsinki server with the key that was given to you, save the connection configuration.
+4) get HoboCopy.exe
+5) Below is the backup.bat script that first makes a copy of the data using hobocopy
+   and then transfers data to remote server using winSCP, change paths.
+   
+   cd C:\Users\mittaaja\Desktop\hobocopy
+   hobocopy /full /recursive "C:\Users\mittaaja\Desktop\nais-5-7\nais-5-7-config-20181229\nais-5-7-data" "C:\Users\mittaaja\Desktop\nais-5-7-data-snapshot"
+   cd C:\"Program Files (x86)"\WinSCP
+   winscp.com /command ^ "open <name of connection>" ^ "cd /data" ^ "lcd C:\Users\mittaaja\Desktop\nais-5-7-data-snapshot" ^ "put * ./" ^ "exit"
+
+6) Use Windows Task Scheduler to run the backup script periodically (once a day) 

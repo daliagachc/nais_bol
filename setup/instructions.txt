@@ -1,4 +1,6 @@
-1) Create measurement shortcut from spectops and save it in the startup folder: 
+These are instructions to sync data to the helsinki servers
+
+1) Create measurement shortcut from spectops and save it in the startup folder:
 
     C:\Users\<user name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 

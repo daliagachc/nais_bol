@@ -1,0 +1,15 @@
+- { id: "pos_postfilter_voltage_vout", name: "Pos postfilter control voltage (V)" }
+- { id: "neg_postfilter_voltage_vout", name: "Neg postfilter control voltage (V)" }
+- { id: "blowers_disabled", name: "Disable all blowers" }
+- { id: "particles_pos_charger_current", name: "Pos charger current in particles mode (nA)" }
+- { id: "particles_neg_charger_current", name: "Neg charger current in particles mode (nA)" }
+- { id: "baro_override", name: "Override sample air pressure value (hPa)" }
+- { id: "pos_sheath_flow", name: "Pos sheath flow override (l/min)" }
+- { id: "neg_sheath_flow", name: "Neg sheath flow override (l/min)" }
+- { id: "pos_sample_flow", name: "Pos sample flow override (l/min)" }
+- { id: "neg_sample_flow", name: "Neg sample flow override (l/min)" }
+- { id: "offset_pos_discharger_current", name: "Pos discharger current in offset mode (nA)" }
+- { id: "offset_neg_discharger_current", name: "Neg discharger current in offset mode (nA)" }
+- { id: "preemptive_reset_enabled", name: "Electrometer preemptive reset enabled" }
+- { id: "preemptive_reset_threshold_lower", name: "Electrometer preemptive reset lower threshold (V)" }
+- { id: "preemptive_reset_threshold_upper", name: "Electrometer preemptive reset upper threshold (V)" }

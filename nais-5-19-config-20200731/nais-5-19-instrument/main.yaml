@@ -1,0 +1,19 @@
+instrument_type: spectcore-v2
+
+instrument_id: NAIS-5-19
+
+opmodes:
+  - offset
+  - particles
+  - ions
+  - ionbcg
+  - alterch
+  - shutdown
+
+offset_opmode: offset
+
+raw_variable_defs:
+  - vardef_main.yaml
+  - vardef_electrometers.yaml
+
+electrometer_def: electrometers.yaml

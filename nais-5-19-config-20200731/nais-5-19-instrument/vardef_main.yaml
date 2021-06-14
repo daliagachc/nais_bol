@@ -1,0 +1,288 @@
+baro:
+  desc: Sample air pressure
+  unit: hPa
+baro_internal:
+  desc: Instrument air pressure
+  unit: hPa
+bgfilter:
+  desc: Background filter voltage
+  unit: V
+bgfilter_on:
+  desc: Background filter voltage enabled
+  unit: ''
+bgfilter_vin:
+  desc: Background filter voltage sensor signal
+  unit: V
+neg_analyzer_1:
+  desc: Analyzer −9 V
+  unit: V
+neg_analyzer_1_vin:
+  desc: Analyzer −9 V sensor signal
+  unit: V
+neg_analyzer_2:
+  desc: Analyzer −35 V
+  unit: V
+neg_analyzer_2_vin:
+  desc: Analyzer −35 V sensor signal
+  unit: V
+neg_analyzer_3:
+  desc: Analyzer −150 V
+  unit: V
+neg_analyzer_3_vin:
+  desc: Analyzer −150 V sensor signal
+  unit: V
+neg_analyzer_4:
+  desc: Analyzer −700 V
+  unit: V
+neg_analyzer_4_vin:
+  desc: Analyzer −700 V sensor signal
+  unit: V
+neg_charger_current:
+  desc: − charger current
+  unit: nA
+neg_charger_current_on:
+  desc: − charger current enabled
+  unit: ''
+neg_charger_current_tgt:
+  desc: − charger current target
+  unit: nA
+neg_charger_current_vin:
+  desc: − charger current sensor signal
+  unit: V
+neg_charger_current_vout:
+  desc: − charger current control signal
+  unit: V
+neg_charger_current_vtgt:
+  desc: − charger current target signal
+  unit: V
+neg_charger_voltage:
+  desc: − charger voltage
+  unit: kV
+neg_charger_voltage_vin:
+  desc: − charger voltage sensor signal
+  unit: V
+neg_discharger_current:
+  desc: − discharger current
+  unit: nA
+neg_discharger_current_on:
+  desc: − discharger current enabled
+  unit: ''
+neg_discharger_current_tgt:
+  desc: − discharger current target
+  unit: nA
+neg_discharger_current_vin:
+  desc: − discharger current sensor signal
+  unit: V
+neg_discharger_current_vout:
+  desc: − discharger current control signal
+  unit: V
+neg_discharger_current_vtgt:
+  desc: − discharger current target signal
+  unit: V
+neg_discharger_voltage:
+  desc: − discharger voltage
+  unit: kV
+neg_discharger_voltage_vin:
+  desc: − discharger voltage sensor signal
+  unit: V
+neg_postfilter_voltage:
+  desc: − postfilter voltage
+  unit: V
+neg_postfilter_voltage_vin:
+  desc: − postfilter voltage sensor signal
+  unit: V
+neg_postfilter_voltage_vout:
+  desc: − postfilter voltage control signal
+  unit: V
+neg_prefilter_voltage:
+  desc: − prefilter voltage
+  unit: V
+neg_prefilter_voltage_on:
+  desc: − prefilter voltage enabled
+  unit: ''
+neg_prefilter_voltage_vin:
+  desc: − prefilter voltage sensor signal
+  unit: V
+neg_prefilter_voltage_vout:
+  desc: − prefilter voltage control signal
+  unit: V
+neg_sampleflow:
+  desc: − sample flow
+  unit: l/min
+neg_sampleflow_tgt:
+  desc: − sample flow target
+  unit: l/min
+neg_sampleflow_vin:
+  desc: − sample flow sensor dp
+  unit: Pa
+neg_sampleflow_vout:
+  desc: − sample flow control signal
+  unit: V
+neg_sampleflow_vtgt:
+  desc: − sample flow target dp
+  unit: Pa
+neg_sheathfilter_sensor_voltage:
+  desc: − sheath air filter sensor
+  unit: V
+neg_sheathfilter_voltage:
+  desc: − sheath air filter voltage
+  unit: kV
+neg_sheathflow:
+  desc: − sheath flow
+  unit: l/min
+neg_sheathflow_tgt:
+  desc: − sheath flow target
+  unit: l/min
+neg_sheathflow_vin:
+  desc: − sheath flow sensor dp
+  unit: Pa
+neg_sheathflow_vout:
+  desc: − sheath flow control signal
+  unit: V
+neg_sheathflow_vtgt:
+  desc: − sheath flow target dp
+  unit: Pa
+pos_analyzer_1:
+  desc: Analyzer +9 V
+  unit: V
+pos_analyzer_1_vin:
+  desc: Analyzer +9 V sensor signal
+  unit: V
+pos_analyzer_2:
+  desc: Analyzer +35 V
+  unit: V
+pos_analyzer_2_vin:
+  desc: Analyzer +35 V sensor signal
+  unit: V
+pos_analyzer_3:
+  desc: Analyzer +150 V
+  unit: V
+pos_analyzer_3_vin:
+  desc: Analyzer +150 V sensor signal
+  unit: V
+pos_analyzer_4:
+  desc: Analyzer +700 V
+  unit: V
+pos_analyzer_4_vin:
+  desc: Analyzer +700 V sensor signal
+  unit: V
+pos_charger_current:
+  desc: + charger current
+  unit: nA
+pos_charger_current_on:
+  desc: + charger current enabled
+  unit: ''
+pos_charger_current_tgt:
+  desc: + charger current target
+  unit: nA
+pos_charger_current_vin:
+  desc: + charger current sensor signal
+  unit: V
+pos_charger_current_vout:
+  desc: + charger current control signal
+  unit: V
+pos_charger_current_vtgt:
+  desc: + charger current target signal
+  unit: V
+pos_charger_voltage:
+  desc: + charger voltage
+  unit: kV
+pos_charger_voltage_vin:
+  desc: + charger voltage sensor signal
+  unit: V
+pos_discharger_current:
+  desc: + discharger current
+  unit: nA
+pos_discharger_current_on:
+  desc: + discharger current enabled
+  unit: ''
+pos_discharger_current_tgt:
+  desc: + discharger current target
+  unit: nA
+pos_discharger_current_vin:
+  desc: + discharger current sensor signal
+  unit: V
+pos_discharger_current_vout:
+  desc: + discharger current control signal
+  unit: V
+pos_discharger_current_vtgt:
+  desc: + discharger current target signal
+  unit: V
+pos_discharger_voltage:
+  desc: + discharger voltage
+  unit: kV
+pos_discharger_voltage_vin:
+  desc: + discharger voltage sensor signal
+  unit: V
+pos_postfilter_voltage:
+  desc: + postfilter voltage
+  unit: V
+pos_postfilter_voltage_vin:
+  desc: + postfilter voltage sensor signal
+  unit: V
+pos_postfilter_voltage_vout:
+  desc: + postfilter voltage control signal
+  unit: V
+pos_prefilter_voltage:
+  desc: + prefilter voltage
+  unit: V
+pos_prefilter_voltage_on:
+  desc: + prefilter voltage enabled
+  unit: ''
+pos_prefilter_voltage_vin:
+  desc: + prefilter voltage sensor signal
+  unit: V
+pos_prefilter_voltage_vout:
+  desc: + prefilter voltage control signal
+  unit: V
+pos_sampleflow:
+  desc: + sample flow
+  unit: l/min
+pos_sampleflow_tgt:
+  desc: + sample flow target
+  unit: l/min
+pos_sampleflow_vin:
+  desc: + sample flow sensor dp
+  unit: Pa
+pos_sampleflow_vout:
+  desc: + sample flow control signal
+  unit: V
+pos_sampleflow_vtgt:
+  desc: + sample flow target dp
+  unit: Pa
+pos_sheathfilter_sensor_voltage:
+  desc: + sheath air filter sensor
+  unit: V
+pos_sheathfilter_voltage:
+  desc: + sheath air filter voltage
+  unit: kV
+pos_sheathflow:
+  desc: + sheath flow
+  unit: l/min
+pos_sheathflow_tgt:
+  desc: + sheath flow target
+  unit: l/min
+pos_sheathflow_vin:
+  desc: + sheath flow sensor dp
+  unit: Pa
+pos_sheathflow_vout:
+  desc: + sheath flow control signal
+  unit: V
+pos_sheathflow_vtgt:
+  desc: + sheath flow target dp
+  unit: Pa
+postfilter_on:
+  desc: Postfilters enabled
+  unit: ''
+relhum:
+  desc: Sample air humidity
+  unit: '%'
+relhum_internal:
+  desc: Instrument humidity
+  unit: '%'
+temperature:
+  desc: Sample temperature
+  unit: °C
+temperature_internal:
+  desc: Instrument temperature
+  unit: °C

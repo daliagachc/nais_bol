@@ -1,0 +1,3 @@
+diluter_flow: {desc: Diluter flow, unit: l/min}
+diluter_flow_tgt: {desc: Diluter flow target, persistent: true, unit: l/min}
+diluter_flow_vout: {desc: Diluter flow control vtg, persistent: true, unit: V}

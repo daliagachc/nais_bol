@@ -1,0 +1,17 @@
+- id: pos
+  size: 25
+  names: ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10",
+      "+11", "+12", "+13", "+14", "+15", "+16", "+17", "+18", "+19", "+20",
+      "+21", "+22", "+23", "+24", "+25"]
+  voltages_var: pos_el_volt
+  raw_currents_var: pos_el_rawcur
+  durations_var: pos_el_duration
+
+- id: neg
+  size: 25
+  names: ["−1", "−2", "−3", "−4", "−5", "−6", "−7", "−8", "−9", "−10",
+      "−11", "−12", "−13", "−14", "−15", "−16", "−17", "−18", "−19", "−20",
+      "−21", "−22", "−23", "−24", "−25"]
+  voltages_var: neg_el_volt
+  raw_currents_var: neg_el_rawcur
+  durations_var: neg_el_duration

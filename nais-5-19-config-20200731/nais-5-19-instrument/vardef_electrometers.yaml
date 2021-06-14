@@ -1,0 +1,37 @@
+pos_el_volt:
+  desc: "Pos electrometer voltage"
+  unit: "V"
+  size: 25
+  is_electrometer: true
+
+pos_el_rawcur:
+  desc: "Pos electrometer raw currents"
+  unit: "V"
+  size: 25
+  is_electrometer: true
+
+pos_el_duration:
+  desc: "Pos electrometer duration"
+  unit: "V"
+  size: 25
+  is_electrometer: true
+
+neg_el_volt:
+  desc: "Neg electrometer voltage"
+  unit: "V"
+  size: 25
+  is_electrometer: true
+
+neg_el_rawcur:
+  desc: "Neg electrometer raw currents"
+  unit: "V"
+  size: 25
+  is_electrometer: true
+
+neg_el_duration:
+  desc: "Neg electrometer duration"
+  unit: "V"
+  size: 25
+  is_electrometer: true
+
+

@@ -1,0 +1,1188 @@
+cols:
+  name: {title: Name, width_str: MMMMMMMMMMMMMMMMMMM}
+  onoff: {title: 'On', width_str: '00000'}
+  signame: {title: Name, width_str: MMMMMMMMMMMMMMMMMMM}
+  tgt: {title: Target, width_str: XXXXXXX}
+  tgt_std: {title: σ T, width_str: XXXXXXX}
+  tgt_ws: {title: Target, width_str: XXXXXXXXXX}
+  value: {title: Value, width_str: XXXXXXX}
+  value_std: {title: σ V, width_str: XXXXXXX}
+  value_ws: {title: Value, width_str: XXXXXXXXXXXXXXXXX}
+  vin: {title: U in, width_str: XXXXXXX}
+  vin_std: {title: σ Ui, width_str: XXXXXXX}
+  vin_ws: {title: U in, width_str: XXXXXXXXXXXXXXXXX}
+  vout: {title: U out, width_str: XXXXXXX}
+  vout_std: {title: σ Uo, width_str: XXXXXXX}
+  vout_ws: {title: U out, width_str: XXXXXXXXXXXXXXXXX}
+  vtgt: {title: U tgt, width_str: XXXXXXX}
+  vtgt_std: {title: σ Ut, width_str: XXXXXXX}
+  vtgt_ws: {title: U tgt, width_str: XXXXXXXXXXXXXXXXX}
+layouts:
+- cols: [signame, onoff, value, value_std, vout, vout_std, vin, vin_std, vtgt, vtgt_std]
+  name: Comprehensive
+  rows: [pos_sampleflow, neg_sampleflow, pos_sheathflow, neg_sheathflow, pos_discharger_current,
+    neg_discharger_current, pos_discharger_voltage, neg_discharger_voltage, pos_prefilter_voltage,
+    neg_prefilter_voltage, pos_charger_current, neg_charger_current, pos_charger_voltage,
+    neg_charger_voltage, pos_postfilter_voltage, neg_postfilter_voltage, pos_analyzer_1,
+    pos_analyzer_2, pos_analyzer_3, pos_analyzer_4, neg_analyzer_1, neg_analyzer_2,
+    neg_analyzer_3, neg_analyzer_4, bgfilter, temperature, baro, relhum, temperature_internal,
+    baro_internal, relhum_internal]
+- cols: [name, onoff, value_ws, tgt, vout_ws, vin_ws, vtgt_ws]
+  name: Comprehensive 2
+  rows: [pos_sampleflow, neg_sampleflow, pos_sheathflow, neg_sheathflow, pos_discharger_current,
+    neg_discharger_current, pos_discharger_voltage, neg_discharger_voltage, pos_prefilter_voltage,
+    neg_prefilter_voltage, pos_charger_current, neg_charger_current, pos_charger_voltage,
+    neg_charger_voltage, pos_postfilter_voltage, neg_postfilter_voltage, pos_analyzer_1,
+    pos_analyzer_2, pos_analyzer_3, pos_analyzer_4, neg_analyzer_1, neg_analyzer_2,
+    neg_analyzer_3, neg_analyzer_4, bgfilter, temperature, baro, relhum, temperature_internal,
+    baro_internal, relhum_internal]
+rows:
+  baro:
+    name: {align: left, text: Sample air pressure (hPa)}
+    signame: {align: left, text: Sample air pressure (hPa)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [baro.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [baro.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [baro.mean, baro.stddev]
+  baro_internal:
+    name: {align: left, text: Instrument air pressure (hPa)}
+    signame: {align: left, text: Instrument air pressure (hPa)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [baro_internal.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [baro_internal.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [baro_internal.mean, baro_internal.stddev]
+  bgfilter:
+    name: {align: left, text: Background filter voltage (V)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [bgfilter_on.mean]
+    signame: {align: left, text: Background filter voltage (V)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [bgfilter.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [bgfilter.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [bgfilter.mean, bgfilter.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [bgfilter_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [bgfilter_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [bgfilter_vin.mean, bgfilter_vin.stddev]
+  neg_analyzer_1:
+    name: {align: left, text: Analyzer -9 V}
+    signame: {align: left, text: Analyzer -9 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_analyzer_1.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_analyzer_1.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_analyzer_1.mean, neg_analyzer_1.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_analyzer_1_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_analyzer_1_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_analyzer_1_vin.mean, neg_analyzer_1_vin.stddev]
+  neg_analyzer_2:
+    name: {align: left, text: Analyzer -35 V}
+    signame: {align: left, text: Analyzer -35 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_analyzer_2.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_analyzer_2.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_analyzer_2.mean, neg_analyzer_2.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_analyzer_2_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_analyzer_2_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_analyzer_2_vin.mean, neg_analyzer_2_vin.stddev]
+  neg_analyzer_3:
+    name: {align: left, text: Analyzer -150 V}
+    signame: {align: left, text: Analyzer -150 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_analyzer_3.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_analyzer_3.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_analyzer_3.mean, neg_analyzer_3.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_analyzer_3_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_analyzer_3_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_analyzer_3_vin.mean, neg_analyzer_3_vin.stddev]
+  neg_analyzer_4:
+    name: {align: left, text: Analyzer -700 V}
+    signame: {align: left, text: Analyzer -700 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_analyzer_4.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_analyzer_4.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_analyzer_4.mean, neg_analyzer_4.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_analyzer_4_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_analyzer_4_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_analyzer_4_vin.mean, neg_analyzer_4_vin.stddev]
+  neg_charger_current:
+    name: {align: left, text: Neg charger current (nA)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [neg_charger_current_on.mean]
+    signame: {align: left, text: ­− charger current (nA)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [neg_charger_current_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_charger_current.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_charger_current.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_charger_current.mean, neg_charger_current.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_charger_current_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_charger_current_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_charger_current_vin.mean, neg_charger_current_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [neg_charger_current_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_charger_current_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_charger_current_vout.mean, neg_charger_current_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [neg_charger_current_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_charger_current_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_charger_current_vtgt.mean, neg_charger_current_vtgt.stddev]
+  neg_charger_voltage:
+    name: {align: left, text: Neg charger voltage (kV)}
+    signame: {align: left, text: ­− charger voltage (kV)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [neg_charger_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [neg_charger_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [neg_charger_voltage.mean, neg_charger_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_charger_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_charger_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_charger_voltage_vin.mean, neg_charger_voltage_vin.stddev]
+  neg_discharger_current:
+    name: {align: left, text: Neg discharger current (nA)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [neg_discharger_current_on.mean]
+    signame: {align: left, text: ­− discharger current (nA)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [neg_discharger_current_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_discharger_current.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_discharger_current.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_discharger_current.mean, neg_discharger_current.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_discharger_current_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_discharger_current_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_discharger_current_vin.mean, neg_discharger_current_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [neg_discharger_current_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_discharger_current_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_discharger_current_vout.mean, neg_discharger_current_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [neg_discharger_current_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_discharger_current_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_discharger_current_vtgt.mean, neg_discharger_current_vtgt.stddev]
+  neg_discharger_voltage:
+    name: {align: left, text: Neg discharger voltage (kV)}
+    signame: {align: left, text: ­− discharger voltage (kV)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [neg_discharger_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [neg_discharger_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [neg_discharger_voltage.mean, neg_discharger_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_discharger_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_discharger_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_discharger_voltage_vin.mean, neg_discharger_voltage_vin.stddev]
+  neg_postfilter_voltage:
+    name: {align: left, text: Neg postfilter voltage (V)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [postfilter_on.mean]
+    signame: {align: left, text: ­− postfilter voltage (V)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [neg_postfilter_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [neg_postfilter_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [neg_postfilter_voltage.mean, neg_postfilter_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_postfilter_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_postfilter_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_postfilter_voltage_vin.mean, neg_postfilter_voltage_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [neg_postfilter_voltage_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_postfilter_voltage_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_postfilter_voltage_vout.mean, neg_postfilter_voltage_vout.stddev]
+  neg_prefilter_voltage:
+    name: {align: left, text: Neg prefilter voltage (V)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [neg_prefilter_voltage_on.mean]
+    signame: {align: left, text: ­− prefilter voltage (V)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [neg_prefilter_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [neg_prefilter_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [neg_prefilter_voltage.mean, neg_prefilter_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_prefilter_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_prefilter_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_prefilter_voltage_vin.mean, neg_prefilter_voltage_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [neg_prefilter_voltage_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_prefilter_voltage_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_prefilter_voltage_vout.mean, neg_prefilter_voltage_vout.stddev]
+  neg_sampleflow:
+    name: {align: left, text: Neg sampleflow (l/min)}
+    signame: {align: left, text: ­− sampleflow (l/min)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [neg_sampleflow_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_sampleflow.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_sampleflow.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_sampleflow.mean, neg_sampleflow.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_sampleflow_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_sampleflow_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_sampleflow_vin.mean, neg_sampleflow_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [neg_sampleflow_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_sampleflow_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_sampleflow_vout.mean, neg_sampleflow_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [neg_sampleflow_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_sampleflow_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_sampleflow_vtgt.mean, neg_sampleflow_vtgt.stddev]
+  neg_sheathflow:
+    name: {align: left, text: Neg sheathflow (l/min)}
+    signame: {align: left, text: ­− sheathflow (l/min)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [neg_sheathflow_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [neg_sheathflow.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [neg_sheathflow.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [neg_sheathflow.mean, neg_sheathflow.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [neg_sheathflow_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_sheathflow_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_sheathflow_vin.mean, neg_sheathflow_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [neg_sheathflow_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_sheathflow_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_sheathflow_vout.mean, neg_sheathflow_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [neg_sheathflow_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [neg_sheathflow_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [neg_sheathflow_vtgt.mean, neg_sheathflow_vtgt.stddev]
+  pos_analyzer_1:
+    name: {align: left, text: Analyzer +9 V}
+    signame: {align: left, text: Analyzer +9 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_analyzer_1.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_analyzer_1.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_analyzer_1.mean, pos_analyzer_1.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_analyzer_1_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_analyzer_1_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_analyzer_1_vin.mean, pos_analyzer_1_vin.stddev]
+  pos_analyzer_2:
+    name: {align: left, text: Analyzer +35 V}
+    signame: {align: left, text: Analyzer +35 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_analyzer_2.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_analyzer_2.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_analyzer_2.mean, pos_analyzer_2.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_analyzer_2_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_analyzer_2_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_analyzer_2_vin.mean, pos_analyzer_2_vin.stddev]
+  pos_analyzer_3:
+    name: {align: left, text: Analyzer +150 V}
+    signame: {align: left, text: Analyzer +150 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_analyzer_3.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_analyzer_3.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_analyzer_3.mean, pos_analyzer_3.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_analyzer_3_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_analyzer_3_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_analyzer_3_vin.mean, pos_analyzer_3_vin.stddev]
+  pos_analyzer_4:
+    name: {align: left, text: Analyzer +700 V}
+    signame: {align: left, text: Analyzer +700 V}
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_analyzer_4.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_analyzer_4.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_analyzer_4.mean, pos_analyzer_4.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_analyzer_4_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_analyzer_4_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_analyzer_4_vin.mean, pos_analyzer_4_vin.stddev]
+  pos_charger_current:
+    name: {align: left, text: Pos charger current (nA)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [pos_charger_current_on.mean]
+    signame: {align: left, text: + charger current (nA)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [pos_charger_current_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_charger_current.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_charger_current.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_charger_current.mean, pos_charger_current.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_charger_current_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_charger_current_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_charger_current_vin.mean, pos_charger_current_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [pos_charger_current_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_charger_current_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_charger_current_vout.mean, pos_charger_current_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [pos_charger_current_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_charger_current_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_charger_current_vtgt.mean, pos_charger_current_vtgt.stddev]
+  pos_charger_voltage:
+    name: {align: left, text: Pos charger voltage (kV)}
+    signame: {align: left, text: + charger voltage (kV)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [pos_charger_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [pos_charger_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [pos_charger_voltage.mean, pos_charger_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_charger_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_charger_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_charger_voltage_vin.mean, pos_charger_voltage_vin.stddev]
+  pos_discharger_current:
+    name: {align: left, text: Pos discharger current (nA)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [pos_discharger_current_on.mean]
+    signame: {align: left, text: + discharger current (nA)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [pos_discharger_current_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_discharger_current.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_discharger_current.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_discharger_current.mean, pos_discharger_current.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_discharger_current_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_discharger_current_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_discharger_current_vin.mean, pos_discharger_current_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [pos_discharger_current_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_discharger_current_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_discharger_current_vout.mean, pos_discharger_current_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [pos_discharger_current_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_discharger_current_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_discharger_current_vtgt.mean, pos_discharger_current_vtgt.stddev]
+  pos_discharger_voltage:
+    name: {align: left, text: Pos discharger voltage (kV)}
+    signame: {align: left, text: + discharger voltage (kV)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [pos_discharger_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [pos_discharger_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [pos_discharger_voltage.mean, pos_discharger_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_discharger_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_discharger_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_discharger_voltage_vin.mean, pos_discharger_voltage_vin.stddev]
+  pos_postfilter_voltage:
+    name: {align: left, text: Pos postfilter voltage (V)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [postfilter_on.mean]
+    signame: {align: left, text: + postfilter voltage (V)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [pos_postfilter_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [pos_postfilter_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [pos_postfilter_voltage.mean, pos_postfilter_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_postfilter_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_postfilter_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_postfilter_voltage_vin.mean, pos_postfilter_voltage_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [pos_postfilter_voltage_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_postfilter_voltage_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_postfilter_voltage_vout.mean, pos_postfilter_voltage_vout.stddev]
+  pos_prefilter_voltage:
+    name: {align: left, text: Pos prefilter voltage (V)}
+    onoff:
+      align: right
+      text: '%.2g'
+      variables: [pos_prefilter_voltage_on.mean]
+    signame: {align: left, text: + prefilter voltage (V)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [pos_prefilter_voltage.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [pos_prefilter_voltage.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [pos_prefilter_voltage.mean, pos_prefilter_voltage.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_prefilter_voltage_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_prefilter_voltage_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_prefilter_voltage_vin.mean, pos_prefilter_voltage_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [pos_prefilter_voltage_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_prefilter_voltage_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_prefilter_voltage_vout.mean, pos_prefilter_voltage_vout.stddev]
+  pos_sampleflow:
+    name: {align: left, text: Pos sampleflow (l/min)}
+    signame: {align: left, text: + sampleflow (l/min)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [pos_sampleflow_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_sampleflow.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_sampleflow.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_sampleflow.mean, pos_sampleflow.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_sampleflow_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_sampleflow_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_sampleflow_vin.mean, pos_sampleflow_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [pos_sampleflow_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_sampleflow_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_sampleflow_vout.mean, pos_sampleflow_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [pos_sampleflow_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_sampleflow_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_sampleflow_vtgt.mean, pos_sampleflow_vtgt.stddev]
+  pos_sheathflow:
+    name: {align: left, text: Pos sheathflow (l/min)}
+    signame: {align: left, text: + sheathflow (l/min)}
+    tgt:
+      align: right
+      text: '%.2f'
+      variables: [pos_sheathflow_tgt.mean]
+    value:
+      align: right
+      text: '%.2f'
+      variables: [pos_sheathflow.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.2f'
+      variables: [pos_sheathflow.stddev]
+    value_ws:
+      align: right
+      text: '%.2f ±%.2f'
+      variables: [pos_sheathflow.mean, pos_sheathflow.stddev]
+    vin:
+      align: right
+      text: '%.3f'
+      variables: [pos_sheathflow_vin.mean]
+    vin_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_sheathflow_vin.stddev]
+    vin_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_sheathflow_vin.mean, pos_sheathflow_vin.stddev]
+    vout:
+      align: right
+      text: '%.3f'
+      variables: [pos_sheathflow_vout.mean]
+    vout_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_sheathflow_vout.stddev]
+    vout_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_sheathflow_vout.mean, pos_sheathflow_vout.stddev]
+    vtgt:
+      align: right
+      text: '%.3f'
+      variables: [pos_sheathflow_vtgt.mean]
+    vtgt_std:
+      align: right
+      color: gray
+      text: '%.3f'
+      variables: [pos_sheathflow_vtgt.stddev]
+    vtgt_ws:
+      align: right
+      text: '%.3f ±%.3f'
+      variables: [pos_sheathflow_vtgt.mean, pos_sheathflow_vtgt.stddev]
+  relhum:
+    name: {align: left, text: Sample rel humidity (%)}
+    signame: {align: left, text: Sample rel humidity (%)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [relhum.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [relhum.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [relhum.mean, relhum.stddev]
+  relhum_internal:
+    name: {align: left, text: Instrument rel humidity (%)}
+    signame: {align: left, text: Instrument rel humidity (%)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [relhum_internal.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [relhum_internal.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [relhum_internal.mean, relhum_internal.stddev]
+  temperature:
+    name: {align: left, text: Sample temperature (°C)}
+    signame: {align: left, text: Sample temperature (°C)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [temperature.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [temperature.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [temperature.mean, temperature.stddev]
+  temperature_internal:
+    name: {align: left, text: Instrument temperature (°C)}
+    signame: {align: left, text: Instrument temperature (°C)}
+    value:
+      align: right
+      text: '%.1f'
+      variables: [temperature_internal.mean]
+    value_std:
+      align: right
+      color: gray
+      text: '%.1f'
+      variables: [temperature_internal.stddev]
+    value_ws:
+      align: right
+      text: '%.1f ±%.1f'
+      variables: [temperature_internal.mean, temperature_internal.stddev]

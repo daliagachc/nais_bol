@@ -1,0 +1,15 @@
+averaging_periods: [1, 10]
+inverters: nais-5-19-instrument/inverters/v14.1-hrnd-elm25-chv
+measurement:
+  auto_discover: true
+  network_address: ''
+  sequence:
+  - [offset, 30]
+  - [particles, 30]
+  - [ions, 30]
+output:
+  path: nais-5-19-data
+  save_averages: [1, 10]
+  save_block_averages: true
+  save_raw: false
+spectrometer: nais-5-19-instrument

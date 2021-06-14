@@ -1,0 +1,18 @@
+- 2021-06-14
+  - diego, zarela, fernando, fabricio 
+  - upnack the instrument and waiting for software delivery from airel
+    - spectops -> for online sampling
+    - retrospect -> for analyzing the data  
+  - online instructions:
+    - https://www.airel.ee/docs/nais-5-manual
+  - reference article:
+    - https://amt.copernicus.org/articles/9/3577/2016/amt-9-3577-2016.pdf
+    - How to reliably detect molecular clusters and nucleation mode
+      particles with Neutral cluster and Air Ion Spectrometer (NAIS)
+
+  - cuenta de github:
+    - user: nais-5-19-bol
+    - pass: Chacaltaya5240
+
+  - software link arrived:
+    - https://airel.ee/private/instruments/wdbfwt84/nais-5-19/
